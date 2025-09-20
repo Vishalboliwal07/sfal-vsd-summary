@@ -112,7 +112,7 @@ make test
 </details>
 
 <details>
-<summary> Day 0 - The Digital Chip Design and Verification Flow </summary>
+
   
 # Day 0 - The Digital Chip Design and Verification Flow
 
