@@ -109,9 +109,7 @@ make
 # Run the test set to ensure everything works
 make test
 ```
-</details>
 
-<details>
 
   
 # Day 0 - The Digital Chip Design and Verification Flow
