@@ -112,9 +112,9 @@ make test
 </details>
 
 <details>
-<summary> Day 1 - The Digital Chip Design and Verification Flow </summary>
+<summary> Day 0 - The Digital Chip Design and Verification Flow </summary>
   
-# Day 1 - The Digital Chip Design and Verification Flow
+# Day 0 - The Digital Chip Design and Verification Flow
 
 This document outlines the standard process for taking an application from a high-level specification to a physical, manufactured microchip. The core principle is to create and verify the design at different levels of abstraction, ensuring the output remains consistent at every stage.
 
