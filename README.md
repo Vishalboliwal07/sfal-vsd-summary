@@ -299,7 +299,7 @@ VERIFICATION PASSED: actual_o1 == expected_o1
 
 <details>
 	<summary>Day 1 - Introduction to Verilog RTL design and Synthesis </summary>
-	
+
 #  Day 1 - Introduction to Verilog RTL design and Synthesis
 This section provides an introduction to Verilog RTL design and synthesis, covering the basics of the open-source simulator iverilog, practical labs using iverilog and gtkwave, an introduction to Yosys and logic synthesis, and hands-on labs with Yosys and Sky130 PDKs.
 
@@ -311,6 +311,8 @@ Icarus Verilog is an open-source Verilog simulator that allows for the simulatio
 
 ### Lab1
 In these labs, you will get hands-on experience with iverilog and the GTKWave waveform viewer. You will learn how to write simple Verilog modules, create testbenches to verify their functionality, and use GTKWave to visualize the simulation results. This will help you understand the behavior of your designs and debug any issues.
+
+![](IMG/Lab1.png)
 
 ## Introduction to Yosys and Logic synthesis
 Yosys is an open-source synthesis tool that converts your Verilog RTL code into a netlist, which is a description of the circuit in terms of logic gates. This section will introduce the fundamental concepts of logic synthesis, including how Yosys optimizes your design for area and performance.
