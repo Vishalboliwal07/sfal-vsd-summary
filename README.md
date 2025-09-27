@@ -308,6 +308,22 @@ This section provides an introduction to Verilog RTL design and synthesis, cover
 
 Icarus Verilog is an open-source Verilog simulator that allows for the simulation of digital circuits described in the Verilog Hardware Description Language (HDL). It is a valuable tool for debugging and verifying the functionality of your designs before they are synthesized into hardware. This section will cover the basics of installing and using iverilog to compile and simulate your Verilog code.
 
+### RTL Simulation
+RTL (Register Transfer Level) design verification is performed through simulation to ensure the design meets specifications. The simulator monitors input signal changes and re-evaluates outputs whenever changes are detected.
+
+Key Tool: Iverilog - An open-source Verilog simulator used for design verification.
+
+### Design and Testbench
+#### Design
+* Contains Verilog code that implements the required specifications
+* Includes primary inputs and outputs
+* Represents the actual hardware functionality
+#### Testbench
+* Setup for applying stimulus to verify the design
+* Acts as a stimulus generator
+* Contains logic to drive inputs to the design under test
+* Monitors and verifies design outputs
+Bidirectional relationship: testbench outputs feed design inputs, design outputs feed back to testbench
 
 
 ## Labs using iverilog and gtkwave
