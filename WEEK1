@@ -1,3 +1,7 @@
+# Week 1 
+
+<details>
+	<summary>Day 1 - Introduction to Verilog RTL design and Synthesis </summary>
 Day 1 - Introduction to Verilog RTL design and Synthesis
 This section provides an introduction to Verilog RTL design and synthesis, covering the basics of the open-source simulator iverilog, practical labs using iverilog and gtkwave, an introduction to Yosys and logic synthesis, and hands-on labs with Yosys and Sky130 PDKs.
 
