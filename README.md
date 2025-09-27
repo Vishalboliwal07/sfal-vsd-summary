@@ -305,14 +305,35 @@ This section provides an introduction to Verilog RTL design and synthesis, cover
 
 
 ## Introduction to open-source simulator iverilog
+
 Icarus Verilog is an open-source Verilog simulator that allows for the simulation of digital circuits described in the Verilog Hardware Description Language (HDL). It is a valuable tool for debugging and verifying the functionality of your designs before they are synthesized into hardware. This section will cover the basics of installing and using iverilog to compile and simulate your Verilog code.
+
+
 
 ## Labs using iverilog and gtkwave
 
-### Lab1
+### Lab-1 Introduction to iverilog design test bench 
+![](IMG/Lab1.png)
+
+### Lab-2 Introduction iverilog gtkwave part1 
+
 In these labs, you will get hands-on experience with iverilog and the GTKWave waveform viewer. You will learn how to write simple Verilog modules, create testbenches to verify their functionality, and use GTKWave to visualize the simulation results. This will help you understand the behavior of your designs and debug any issues.
 
-![](IMG/Lab1.png)
+For executing any Verilog file into the iverlog simulation 
+```
+$ iverilog <verilogfile> <testbench>
+```
+For Example
+```
+$ iverilog good_mux.v tb_good_mux.v
+```
+
+Executing this cmd a new file will be created named as a.out in the same folder 
+
+![](IMG/lab2.1.png)
+
+
+
 
 ## Introduction to Yosys and Logic synthesis
 Yosys is an open-source synthesis tool that converts your Verilog RTL code into a netlist, which is a description of the circuit in terms of logic gates. This section will introduce the fundamental concepts of logic synthesis, including how Yosys optimizes your design for area and performance.
