@@ -333,7 +333,61 @@ Bidirectional relationship: testbench outputs feed design inputs, design outputs
 
 ### Lab-2 Introduction iverilog gtkwave part1 
 
-In these labs, you will get hands-on experience with iverilog and the GTKWave waveform viewer. You will learn how to write simple Verilog modules, create testbenches to verify their functionality, and use GTKWave to visualize the simulation results. This will help you understand the behavior of your designs and debug any issues.
+In these labs, will get hands-on experience with iverilog and the GTKWave waveform viewer. You will learn how to write simple Verilog modules, create testbenches to verify their functionality, and use GTKWave to visualize the simulation results. This will help you understand the behavior of your designs and debug any issues.
+
+Folder structure of the git clone:
+
+* `lib` - will contain sky130 standard cell library
+* `my_lib/verilog_models` - will contain standard cell verilog model
+* `verilog_files -contains` the lab experiments source files
+
+
+Example of a design good_mux.v
+```
+module good_mux (input i0 , input i1 , input sel , output reg y);
+always @ (*)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+
+Example of a testbench tb_good_mux.v
+
+```
+`timescale 1ns / 1ps
+module tb_good_mux;
+	// Inputs
+	reg i0,i1,sel;
+	// Outputs
+	wire y;
+
+        // Instantiate the Unit Under Test (UUT)
+	good_mux uut (
+		.sel(sel),
+		.i0(i0),
+		.i1(i1),
+		.y(y)
+	);
+
+	initial begin
+	$dumpfile("tb_good_mux.vcd");
+	$dumpvars(0,tb_good_mux);
+	// Initialize Inputs
+	sel = 0;
+	i0 = 0;
+	i1 = 0;
+	#300 $finish;
+	end
+
+always #75 sel = ~sel;
+always #10 i0 = ~i0;
+always #55 i1 = ~i1;
+endmodule
+```
 
 For executing any Verilog file into the iverlog simulation 
 ```
@@ -347,6 +401,34 @@ $ iverilog good_mux.v tb_good_mux.v
 Executing this cmd a new file will be created named as a.out in the same folder 
 
 ![](IMG/lab2.1.png)
+
+Now run this a.out file 
+
+```
+./a.out 
+```
+
+A new file will be created format of that will be .vcd
+
+Now, we will launch the gtkwave for wave simulation 
+
+```
+gtkwave <vcd created in previous step>
+```
+For example 
+```
+gtkwave tb_good_mux.vcd
+```
+
+On running this cmd a new window will be opened of gtk wave 
+1. Simply drag and drop input and output to signals
+2. Click on zoom fit button
+
+![](IMG/lab2.2.png)
+
+
+
+
 
 
 
