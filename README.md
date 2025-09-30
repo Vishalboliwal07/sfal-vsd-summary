@@ -919,4 +919,69 @@ endgenerate
 
 </details> 
 
+# Week 2
+<details>
+<summary> Part-1 Understanding SoC Design Fundamentals and the Role of BabySoC </summary>
 
+## 1. What is a System-on-Chip (SoC)?
+A System-on-Chip (SoC) is an integrated circuit that combines all the essential components of a computer or electronic system into a single chip. This consolidation is key to creating the compact, powerful, and energy-efficient devices we use daily, such as smartphones, tablets, and wearables. By integrating everything onto one chip, SoCs save space, reduce power consumption, and improve performance.
+
+### Key Components of an SoC
+A typical SoC includes several key components:
+
+-  <b>CPU (Central Processing Unit):</b> The core of the SoC, responsible for executing instructions and managing tasks.
+
+-  <b>GPU (Graphics Processing Unit):</b> Handles graphics-intensive tasks like gaming and video playback.
+
+-  <b>Memory:</b> Includes RAM for temporary data and ROM or flash storage for permanent storage.
+
+-  <b>I/O Ports:</b> Connect the SoC to external devices like cameras, displays, and USB ports.
+
+- <b> DSP (Digital Signal Processor):</b> Specializes in processing signals like audio and video.
+
+-  <b>Power Management Unit:</b> Regulates power consumption to optimize efficiency.
+
+## 2. The SoC Design Flow
+The process of creating an SoC is complex and involves several stages:
+
+1. <b>Specification:</b> Defining the SoC's requirements, features, and performance targets.
+
+2. <b>Logical Design:</b> Creating a high-level design using a hardware description language (HDL).
+
+3. <b>Logic Synthesis:</b> Converting the HDL code into a gate-level netlist.
+
+4. <b>Physical Design:</b> Creating the physical layout of the chip.
+
+5. <b>Signoff:</b> Verifying and testing the design to ensure it meets specifications.
+
+6. <b>Tapeout and Manufacturing:</b> Sending the final design to a foundry for fabrication.
+
+7. <b>Testing and Packaging:</b> Testing the manufactured chips and packaging them for use.
+
+## 3. Introducing VSDBabySoC
+The VSDBabySoC is a compact, open-source SoC designed as an educational platform for learning about digital-analog interfacing. It integrates three main components:
+
+- <b>RVMYTH (RISC-V CPU):</b> A customizable processor that handles data processing.
+
+- <b>Phase-Locked Loop (PLL):</b> Generates a stable clock signal to synchronize the system.
+
+- <b>10-bit Digital-to-Analog Converter (DAC):</b> Converts digital signals from the RVMYTH processor into analog signals.
+
+### How BabySoC Works
+1. <b>Initialization:</b> The PLL generates a stable clock to synchronize the system.
+
+2. <b>Data Processing:</b> The RVMYTH processor processes digital values, storing them in its r17 register.
+
+3. <b>Analog Conversion:</b> The DAC converts the digital values from the r17 register into an analog signal that can be used by external devices.
+
+## 4. The Role of BabySoC in Learning
+The BabySoC project is an excellent tool for understanding SoC design fundamentals for several reasons:
+
+-  <b>Simplified Model:</b> It provides a simplified yet functional model of an SoC, making it easier to understand the core concepts.
+
+-  <b>Hands-On Experience:</b> It offers hands-on experience with functional modeling and simulation using industry-standard tools.
+
+-  <b>Digital-Analog Interfacing:</b> It demonstrates how digital and analog components can be integrated on a single chip to create a complete system.
+
+By working with the BabySoC, you can gain a deeper understanding of how SoCs are designed, how they work, and how they are used in real-world applications.
+</details>
